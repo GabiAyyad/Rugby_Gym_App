@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/*
+  Mobile-first, high contrast, big targets. This gets used one-handed, in a gym,
+  with chalky hands and bad lighting — nothing subtle, nothing below 44px.
+*/
+@theme {
+  --color-ink-950: #08090c;
+  --color-ink-900: #0e1015;
+  --color-ink-850: #151821;
+  --color-ink-800: #1c202b;
+  --color-ink-700: #2a2f3d;
+  --color-ink-600: #3c4353;
+  --color-ink-400: #7b8497;
+  --color-ink-300: #a3abbb;
+  --color-ink-200: #cfd5e0;
+  --color-ink-50:  #f5f7fa;
+
+  --color-pitch-400: #4ade80;
+  --color-pitch-500: #22c55e;
+  --color-pitch-600: #16a34a;
+
+  --color-flare-400: #fbbf24;
+  --color-flare-500: #f59e0b;
+
+  --color-alert-400: #f87171;
+  --color-alert-500: #ef4444;
+
+  --color-sky-ish: #38bdf8;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-card: 0.875rem;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ink-950);
+  color: var(--color-ink-50);
+  font-family: var(--font-sans);
+  /* Room for the fixed bottom nav on small screens. */
+  padding-bottom: env(safe-area-inset-bottom);
+  overscroll-behavior-y: none;
+}
+
+/* Numeric inputs in the logging flow: no spinners, tabular figures. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Rugby Strength",
+  "short_name": "Rugby",
+  "description": "Training programs and session logging for the squad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090c",
+  "theme_color": "#08090c",
+  "orientation": "portrait",
+  "icons": []
+}
