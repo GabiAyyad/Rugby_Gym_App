@@ -1,0 +1,35 @@
+{
+  "name": "rugby-gym-app-js",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "node --env-file=.env.local scripts/migrate.mjs",
+    "db:seed": "node --env-file=.env.local scripts/seed.mjs",
+    "check:db": "node --env-file=.env.local scripts/check-connection.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "idb-keyval": "^6.2.2",
+    "jose": "^6.1.0",
+    "next": "16.3.3",
+    "pg": "^8.13.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "vitest": "^3.2.4"
+  }
+}
